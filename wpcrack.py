@@ -62,3 +62,19 @@ userAgent = [
    'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.143 Safari/537.36',
    'Mozilla/5.0 (Windows NT 6.1; rv:31.0) Gecko/20100101 Firefox/31.0'
 ]
+
+def banner(start = False):
+	current_time = ""
+	if start is True:
+		current_time = "[*] starting at " + datetime.now().strftime("%H:%M:%S (%d-%m-%Y)")
+	print(BANNER + current_time + "\n\n")
+
+
+def sliceList(content):
+	lists = []
+	content = content.readlines()
+	for line in content:
+		lists.append(line.replace("\n", ""))
+	return lists
+	
+
